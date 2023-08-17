@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('1. Check code') {
+            steps {
+                echo 'Start step 1. Check code'
+                
+            }            
+        }
+
+        stage('2. Build iamges'){
+            steps {
+                echo 'Start step 2. Build images'
+            }
+        }
+
+        
+        stage('3. Push image to registry'){
+            steps {
+                echo 'Start step 3. Push image to registry'
+            }
+        }
+
+        
+        stage('4. Deploy on development server'){
+            steps {
+                echo 'Start step 4. Deploy on development server'
+            }
+        }
+
+    }
+}
