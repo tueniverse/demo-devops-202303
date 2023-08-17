@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="devops-api" tests="1" time="0.097">
-  <testsuite name="http://127.0.0.1:8080/hi" id="12de43de-b2d3-4ac1-b437-f349a8e661e2" timestamp="2023-08-17T03:08:53.973Z" tests="3" failures="0" errors="0" time="0.097">
-    <testcase name="Status code is 200" time="0.097" classname="DevopsApi"/>
-    <testcase name="Your test name" time="0.097" classname="DevopsApi"/>
-    <testcase name="Schema is valid" time="0.097" classname="DevopsApi"/>
-  </testsuite>
-</testsuites>
