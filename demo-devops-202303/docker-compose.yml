@@ -1,29 +1,29 @@
-version: '3'
+version: "3"
 services:
   api_test:
     build: ./api-test
     tty: true
     volumes:
       - ./report:/etc/newman/newman
-  
+
   ui_test:
     build: ./ui-test
     volumes:
       - ./ui-test-report:/app/report
 
   frontend:
-    image: somkiat/web:1.1
-    build: 
+    image: tuniverse/web:1.0
+    build:
       context: ./web-react
     ports:
       - 9999:80
     depends_on:
       backend:
         condition: service_healthy
-  
+
   backend:
-    image: somkiat/api:1.0
-    build: 
+    image: tuniverse/api:1.0
+    build:
       context: ./back-springboot2
     ports:
       - 8080:8080
@@ -45,5 +45,3 @@ services:
       - SONAR_PROJECT_BASE_DIR=/app
     volumes:
       - ./back-springboot2:/app
-    
-  
